@@ -39,9 +39,9 @@ services:
       - TZ=${TIMEZONE}
     volumes:
       - ${PWD:-.}/system/mysql:/var/lib/mysql
-  nginx:
+  nginx2:
     build: ../nginx/
-    container_name: nginx
+    container_name: nginx2
     restart: always
     environment:
       TZ: ${TIMEZONE:-Europe/Kiev}
@@ -53,7 +53,7 @@ services:
       - ${PWD}/system/wizard-instructions:/var/www/static/wizard-instructions
       - ${PWD}/system/shared/nginx:/var/tmp/shared
     ports:
-      - 80:80
+      - 4250:4250
 
 
   # ssl-certs:
