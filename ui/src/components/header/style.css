@@ -1,0 +1,14 @@
+.menu-header {
+    position: sticky;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(45deg, #181818a8 0%, #646464cb 55%, #131313cc 90%);
+    width: 100%;
+  }
+  
+  .menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  }
