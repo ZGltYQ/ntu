@@ -9,7 +9,7 @@
     "docker:dev:down": "docker-compose -f docker/docker-compose.yml -f docker/docker-compose.dev.yml down",
     "docker:up": "docker-compose -f docker/docker-compose.yml up",
     "docker:down": "docker-compose -f docker/docker-compose.yml down",
-    "start": "MODE=application NODE_ENV=production node app.mjs",
+    "start": "MODE=application NODE_ENV=production node --max-old-space-size=8192 app.mjs",
     "test:lint": "eslint lib tests app.mjs --ext mjs",
     "test:ava": "ava",
     "test:coverage": "c8 npm run test:ava",
